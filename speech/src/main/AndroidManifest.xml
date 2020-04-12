@@ -1,2 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.quanticheart.speech" />
+    package="com.quanticheart.speech" >
+
+    <application>
+        <activity android:name=".viewmodel.SpeechRecognizerActivity" />
+    </application>
+</manifest>

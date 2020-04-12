@@ -1,4 +1,4 @@
-package com.quanticheart.speech
+package com.quanticheart.speech.speech
 
 import android.app.Activity
 import android.content.Intent

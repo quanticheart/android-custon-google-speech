@@ -8,9 +8,10 @@ import android.os.Bundle
 import android.speech.RecognizerIntent
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import com.quanticheart.speech.SpeechExt
-import com.quanticheart.speech.googleSpeech
-import com.quanticheart.speech.speechDialog
+import com.quanticheart.speech.speech.SpeechExt
+import com.quanticheart.speech.speech.googleSpeech
+import com.quanticheart.speech.speech.speechDialog
+import com.quanticheart.speech.viewmodel.SpeechRecognizerActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -26,6 +27,10 @@ class MainActivity : AppCompatActivity() {
 
         btn2.setOnClickListener {
             googleSpeech()
+        }
+
+        btn3.setOnClickListener {
+            startActivity(Intent(this, SpeechRecognizerActivity::class.java))
         }
     }
 

@@ -1,6 +1,6 @@
 @file:Suppress("SameParameterValue")
 
-package com.quanticheart.speech
+package com.quanticheart.speech.speech
 
 import android.annotation.SuppressLint
 import android.app.Dialog
@@ -13,6 +13,7 @@ import android.speech.SpeechRecognizer
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
+import com.quanticheart.speech.*
 import kotlinx.android.synthetic.main.m_dialog_speech_default.view.*
 
 @SuppressLint("InflateParams")

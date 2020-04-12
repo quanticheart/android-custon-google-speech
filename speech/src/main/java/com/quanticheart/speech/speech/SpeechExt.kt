@@ -1,4 +1,4 @@
-package com.quanticheart.speech
+package com.quanticheart.speech.speech
 
 import android.app.Activity
 import android.content.ActivityNotFoundException
@@ -10,7 +10,7 @@ import android.speech.RecognizerIntent
 import android.speech.SpeechRecognizer
 import android.util.Log
 import android.widget.Toast
-import com.quanticheart.speech.SpeechExt.speechActivityResponse
+import com.quanticheart.speech.speech.SpeechExt.speechActivityResponse
 import java.util.*
 
 object SpeechExt {

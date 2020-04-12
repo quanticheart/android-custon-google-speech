@@ -1,6 +1,6 @@
 @file:Suppress("unused")
 
-package com.quanticheart.speech
+package com.quanticheart.speech.speech
 
 import android.view.View
 import android.view.animation.Animation
