@@ -46,7 +46,7 @@ fun Context.speech(
         RecognizerIntent.EXTRA_LANGUAGE_MODEL,
         RecognizerIntent.LANGUAGE_MODEL_FREE_FORM
     )
-    intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE,Locale.getDefault())
+    intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.getDefault())
     intent.putExtra(RecognizerIntent.EXTRA_MAX_RESULTS, 5)
     intent.putExtra(
         RecognizerIntent.EXTRA_CALLING_PACKAGE,
@@ -58,7 +58,7 @@ fun Context.speech(
         private val TAG = "RecognitionListener"
 
         override fun onReadyForSpeech(params: Bundle?) {
-            Log.d(TAG, "onReadyForSpeech")
+            Log.d(TAG, "onReadyForSpeech: $params")
         }
 
         override fun onBeginningOfSpeech() {
@@ -103,5 +103,23 @@ fun Context.speech(
             Log.d(TAG, "onEvent $eventType")
         }
     })
+    sr.startListening(intent)
+}
+
+fun Context.getSpeechRecognizer(callback: RecognitionListener) {
+    val intent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH)
+    intent.putExtra(
+        RecognizerIntent.EXTRA_LANGUAGE_MODEL,
+        RecognizerIntent.LANGUAGE_MODEL_FREE_FORM
+    )
+    intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.getDefault())
+    intent.putExtra(RecognizerIntent.EXTRA_MAX_RESULTS, 5)
+    intent.putExtra(
+        RecognizerIntent.EXTRA_CALLING_PACKAGE,
+        packageName
+    )
+
+    val sr = SpeechRecognizer.createSpeechRecognizer(this)
+    sr.setRecognitionListener(callback)
     sr.startListening(intent)
 }

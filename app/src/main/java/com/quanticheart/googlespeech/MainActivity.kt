@@ -1,3 +1,5 @@
+@file:Suppress("RECEIVER_NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
+
 package com.quanticheart.googlespeech
 
 import android.app.Activity
@@ -17,7 +19,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         btn1.setOnClickListener {
-            speechDialog()
+            speechDialog("Oque você quer pesquisar?") {
+                Log.e("RESULTS", it)
+            }
         }
 
         btn2.setOnClickListener {

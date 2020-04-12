@@ -21,6 +21,28 @@
             android:gravity="center"
             android:orientation="vertical">
 
+            <TextView
+                android:id="@+id/titleSpeech"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/mSpeechLayoutScale"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Diga para pesquisar" />
+
+            <ImageView
+                android:id="@+id/mSpeechLayoutScale"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/m_ic_mic_speech_circular"
+                android:backgroundTint="#55cccccc"
+                app:layout_constraintBottom_toBottomOf="@+id/mSpeechLayout"
+                app:layout_constraintLeft_toLeftOf="@+id/mSpeechLayout"
+                app:layout_constraintRight_toRightOf="@+id/mSpeechLayout"
+                app:layout_constraintTop_toTopOf="@+id/mSpeechLayout"
+                tools:ignore="ContentDescription" />
+
             <ImageView
                 android:id="@+id/mSpeechLayout"
                 android:layout_width="100dp"
@@ -42,6 +64,16 @@
                 app:layout_constraintRight_toRightOf="@+id/mSpeechLayout"
                 app:layout_constraintTop_toTopOf="@+id/mSpeechLayout"
                 tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/labelResults"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Escutando ..."
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mSpeechLayoutScale" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

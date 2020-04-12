@@ -6,8 +6,6 @@ import android.speech.SpeechRecognizer
 import java.util.*
 
 object SpeechUtils {
-    const val FILED_TO_INITIALIZE_STT_ENGINE = "Sorry! Your device doesn\'t support speech input"
-    const val FAILED_TO_INITILIZE_TTS_ENGINE = "Filed to initilize TTS engine"
     fun getErrorText(errorCode: Int): String {
         return when (errorCode) {
             SpeechRecognizer.ERROR_AUDIO -> "Audio recording error"
